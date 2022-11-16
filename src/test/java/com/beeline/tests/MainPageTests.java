@@ -81,5 +81,88 @@ public class MainPageTests extends TestBase {
         });
     }
 
+    @Test
+    @DisplayName("Checking page 'About'")
+    void aboutPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим во вкладку 'О нас'", () -> {
+
+            $("a[href='/ru/about']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $(".has-edit-button").shouldHave(text("VEON – глобальный провайдер телекоммуникационных и интернет-услуг с более чем 217 млн абонентов в 9 странах мира. Его акции котируются на фондовых рынках NASDAQ и Euronext Amsterdam."));
+        });
+    }
+
+    @Test
+    @DisplayName("Checking page 'Vacancies'")
+    void vacanciesPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим во вкладку 'Вакансии'", () -> {
+
+            $("a[href='/ru/vacancies']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $("div[class='col-12'] h2[class='notoSa text-left h2_space']").shouldHave(text("Вакансии"));
+        });
+    }
+
+    @Test
+    @DisplayName("Checking page 'Management company'")
+    void managementCompanyPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим во вкладку 'Руководство'", () -> {
+
+            $("a[href='/ru/about/managementcompany']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $("#killerfeature1").shouldHave(text("Генеральный директор"));
+        });
+    }
+    @Test
+    @DisplayName("Checking page 'Contacts'")
+    void contactsPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Нажимаем на иконку техподдержки", () -> {
+
+            $("a[href='/ru/about/contacts']").click();
+        });
+
+        step("Проверка отображения окна техподдержки", () -> {
+            $("h2[class='notoSa text-left h2_space']").shouldHave(text("Форма обратной связи"));
+        });
+    }
+    @Test
+    @DisplayName("Checking support chat")
+    void supportChatTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Нажимаем на иконку техподдержки", () -> {
+
+            $(".nsw-launcher").click();
+        });
+
+        step("Проверка отображения окна техподдержки", () -> {
+            $(".nsw-message-text").shouldHave(text("Здравствуйте! Я Малика, буду рада ответить на Ваши вопросы. "));
+        });
+    }
+
 
 }
