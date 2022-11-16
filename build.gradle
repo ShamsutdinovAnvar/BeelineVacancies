@@ -1,13 +1,16 @@
 plugins {
     id 'java-library'
-    id 'io.qameta.allure' version '2.9.6'
+    id 'io.qameta.allure' version '2.11.0'
 }
+
+group 'com.beeline'
+version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
 }
 
-def allureVersion = "2.20.0",
+def allureVersion = "2.19.0",
     selenideVersion = "6.9.0",
     junitVersion = "5.9.0"
 
