@@ -1,4 +1,4 @@
-# Проект по автоматизации тестирования сайта СберКорус
+# Проект по автоматизации тестирования сайта Beeline
 
 ## :page_with_curl:	Содержание
 
@@ -31,7 +31,7 @@
 <code><img width="5%" title="Gradle" src="images/logo/Gradle.svg"></code>
 <code><img width="5%" title="Junit5" src="images/logo/Junit5.svg"></code>
 <code><img width="5%" title="GitHub" src="images/logo/GitHub.svg"></code>
-<code><img width="5%" title="Allure Report" src="images/Allure.svg"></code>
+<code><img width="5%" title="Allure Report" src="images/logo/Allure.svg"></code>
 <code><img width="5%" title="Allure TestOps" src="images/logo/Allure_TO.svg"></code>
 <code><img width="5%" title="RestAssured" src="images/logo/RestAssured.svg"></code>
 <code><img width="5%" title="Jenkins" src="images/logo/Jenkins.svg"></code>
@@ -56,12 +56,12 @@
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; UI
 
-> - [x] *Проверка перехода на страницу авторизации продукта 'Курьер'*
->- [x] *Проверка ошибок в консоле*
->- [x] *Проверка раздела 'О компании'*
->- [x] *Проверка перехода на страницу клиента из раздела 'Клиенты'*
->- [x] *Проверка банера главной страницы*
->- [x] *Проверка раздела 'Клиенты'*
+> - [x] *Проверка загрузки баннера на главной странице*
+>- [x] *Проверка работоспособности модуля авторизации*
+>- [x] *Проверка наличия 'title' в 'header'*
+>- [x] *Проверка раздела 'Тарифные планы'*
+>- [x] *Проверка раздела 'Интернет пакеты'*
+>- [x] *Проверка раздела 'О нас'*
 >- [x] *Проверка работы поиска*
 >- [x] *Проверка оформления подписки по почте*
 >- [x] *Проверка заголовка главной страницы*
