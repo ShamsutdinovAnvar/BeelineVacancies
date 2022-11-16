@@ -1,6 +1,6 @@
 plugins {
     id 'java-library'
-    id 'io.qameta.allure' version '2.11.0'
+    id 'io.qameta.allure' version '2.10.0'
 }
 
 
@@ -9,7 +9,7 @@ repositories {
 }
 
 def allureVersion = "2.19.0",
-    selenideVersion = "6.9.0",
+    selenideVersion = "6.7.3",
     junitVersion = "5.9.0"
 
 allure {
