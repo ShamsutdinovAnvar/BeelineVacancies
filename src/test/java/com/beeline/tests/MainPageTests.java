@@ -111,38 +111,6 @@ public class MainPageTests extends TestBase {
             $("div[class='col-12'] h2[class='notoSa text-left h2_space']").shouldHave(text("Вакансии"));
         });
     }
-    @Test
-    @DisplayName("Checking page 'Management company'")
-    void managementCompanyPageTest() {
-        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
-            open("https://www.beeline.uz/ru/");
-        });
-
-        step("Заходим во вкладку 'Руководство'", () -> {
-
-            $("a[href='/ru/about/managementcompany']").click();
-        });
-
-        step("Проверка отображения страницы", () -> {
-            $("#killerfeature1").shouldHave(text("Генеральный директор"));
-        });
-    }
     
-    @Test
-    @DisplayName("Checking support chat")
-    void supportChatTest() {
-        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
-            open("https://www.beeline.uz/ru/");
-        });
-
-        step("Нажимаем на иконку техподдержки", () -> {
-
-            $(".nsw-launcher").click();
-        });
-
-        step("Проверка отображения окна техподдержки", () -> {
-            $(".nsw-message-text").shouldHave(text("Здравствуйте! Я Малика, буду рада ответить на Ваши вопросы. "));
-        });
-    }
    
 }
