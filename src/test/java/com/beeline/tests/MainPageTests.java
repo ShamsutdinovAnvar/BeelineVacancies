@@ -111,7 +111,7 @@ public class MainPageTests extends TestBase {
             $("div[class='col-12'] h2[class='notoSa text-left h2_space']").shouldHave(text("Вакансии"));
         });
     }
-@Test
+    @Test
     @DisplayName("Checking page 'Management company'")
     void managementCompanyPageTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
