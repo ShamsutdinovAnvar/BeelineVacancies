@@ -127,22 +127,7 @@ public class MainPageTests extends TestBase {
             $("#killerfeature1").shouldHave(text("Генеральный директор"));
         });
     }
-    @Test
-    @DisplayName("Checking page 'Contacts'")
-    void contactsPageTest() {
-        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
-            open("https://www.beeline.uz/ru/");
-        });
-
-        step("Нажимаем на иконку техподдержки", () -> {
-
-            $("a[href='/ru/about/contacts']").click();
-        });
-
-        step("Проверка отображения окна техподдержки", () -> {
-            $("h2[class='notoSa text-left h2_space']").shouldHave(text("Форма обратной связи"));
-        });
-    }
+    
     @Test
     @DisplayName("Checking support chat")
     void supportChatTest() {
