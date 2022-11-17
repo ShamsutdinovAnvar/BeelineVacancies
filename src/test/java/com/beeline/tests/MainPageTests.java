@@ -11,16 +11,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPageTests extends TestBase {
    @Test
-    @DisplayName("Login modal form should appear on main page")
-    void generatedTest() {
-        step("Open url 'https://habr.com/'", () ->
-                open("https://habr.com/"));
+    @DisplayName("Checking the main page banner")
+    void checkBannerTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
 
-        step("Click on Profile button", () ->
-                $("[data-test-id=menu-toggle-guest]").click());
-
-        step("Login modal should be visible", () ->
-                $(".tm-user-menu").shouldBe(visible));
+        step("check banner", () -> {
+            $("#ms-main-banners-banner1").shouldBe(visible);
+        });
     }
 
 }
