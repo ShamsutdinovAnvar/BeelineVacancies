@@ -144,20 +144,5 @@ public class MainPageTests extends TestBase {
             $("h2[class='notoSa text-left h2_space']").shouldHave(text("Форма обратной связи"));
         });
     }
-    @Test
-    @DisplayName("Checking support chat")
-    void supportChatTest() {
-        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
-            open("https://www.beeline.uz/ru/");
-        });
-
-        step("Нажимаем на иконку техподдержки", () -> {
-
-            $(".nsw-launcher").click();
-        });
-
-        step("Проверка отображения окна техподдержки", () -> {
-            $(".nsw-message-text").shouldHave(text("Здравствуйте! Я Малика, буду рада ответить на Ваши вопросы. "));
-        });
-    }
+    
 }
