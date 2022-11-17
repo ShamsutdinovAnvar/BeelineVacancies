@@ -47,4 +47,53 @@ public class MainPageTests extends TestBase {
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
     }
+   @Test
+    @DisplayName("Checking the Tariff Plans section")
+    void tariffPlansTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим в раздел 'Тарифные планы'", () -> {
+            $$("span[class='label-nav notoSa main__menu-item']").first().click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $(".notoSa.text-center.h2_space").shouldHave(text("Тарифные планы"));
+        });
+    }
+
+    @Test
+    @DisplayName("Checking the Internet packages section")
+    void internetPackagesTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим в раздел 'Интернет пакеты'", () -> {
+            $("a[href='https://beeline.uz/ru/products/internet-paketi?utm_source=site&utm_medium=cust_exp&utm_campaign=paketi_ru']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $("div[id='tarif-list1'] h2[class='notoSa text-center h2_space']").shouldHave(text("Однодневные интернет-пакеты"));
+        });
+    }
+
+    @Test
+    @DisplayName("Checking page 'About'")
+    void aboutPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим во вкладку 'О нас'", () -> {
+
+            $("a[href='/ru/about']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $(".has-edit-button").shouldHave(text("VEON – глобальный провайдер телекоммуникационных и интернет-услуг с более чем 217 млн абонентов в 9 странах мира. Его акции котируются на фондовых рынках NASDAQ и Euronext Amsterdam."));
+        });
+    }
+
 }
