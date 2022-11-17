@@ -10,7 +10,7 @@ import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPageTests extends TestBase {
-   @Test
+    @Test
     @DisplayName("Checking the main page banner")
     void checkBannerTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
@@ -21,7 +21,7 @@ public class MainPageTests extends TestBase {
             $("#ms-main-banners-banner1").shouldBe(visible);
         });
     }
- @Test
+    @Test
     @DisplayName("Login modal form should appear on main page")
     void generatedTest() {
         step("Open url 'https://www.beeline.uz/ru/'", () ->
@@ -47,7 +47,7 @@ public class MainPageTests extends TestBase {
             assertThat(actualTitle).isEqualTo(expectedTitle);
         });
     }
-   @Test
+    @Test
     @DisplayName("Checking the Tariff Plans section")
     void tariffPlansTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
@@ -95,5 +95,69 @@ public class MainPageTests extends TestBase {
             $(".has-edit-button").shouldHave(text("VEON – глобальный провайдер телекоммуникационных и интернет-услуг с более чем 217 млн абонентов в 9 странах мира. Его акции котируются на фондовых рынках NASDAQ и Euronext Amsterdam."));
         });
     }
+    @Test
+    @DisplayName("Checking page 'Vacancies'")
+    void vacanciesPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
 
+        step("Заходим во вкладку 'Вакансии'", () -> {
+
+            $("a[href='/ru/vacancies']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $("div[class='col-12'] h2[class='notoSa text-left h2_space']").shouldHave(text("Вакансии"));
+        });
+    }
+
+    @Test
+    @DisplayName("Checking page 'Management company'")
+    void managementCompanyPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Заходим во вкладку 'Руководство'", () -> {
+
+            $("a[href='/ru/about/managementcompany']").click();
+        });
+
+        step("Проверка отображения страницы", () -> {
+            $("#killerfeature1").shouldHave(text("Генеральный директор"));
+        });
+    }
+    @Test
+    @DisplayName("Checking page 'Contacts'")
+    void contactsPageTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Нажимаем на иконку техподдержки", () -> {
+
+            $("a[href='/ru/about/contacts']").click();
+        });
+
+        step("Проверка отображения окна техподдержки", () -> {
+            $("h2[class='notoSa text-left h2_space']").shouldHave(text("Форма обратной связи"));
+        });
+    }
+    @Test
+    @DisplayName("Checking support chat")
+    void supportChatTest() {
+        step("Открываем сайт https://www.beeline.uz/ru/", () -> {
+            open("https://www.beeline.uz/ru/");
+        });
+
+        step("Нажимаем на иконку техподдержки", () -> {
+
+            $(".nsw-launcher").click();
+        });
+
+        step("Проверка отображения окна техподдержки", () -> {
+            $(".nsw-message-text").shouldHave(text("Здравствуйте! Я Малика, буду рада ответить на Ваши вопросы. "));
+        });
+    }
 }
