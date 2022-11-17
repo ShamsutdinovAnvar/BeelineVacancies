@@ -22,7 +22,7 @@
 
 ## :technologist: Технологии и инструменты
 
-<p  align="center"
+<p  align="center">
 
 <code><img width="5%" title="IntelliJ IDEA" src="images/logo/Idea.svg"></code>
 <code><img width="5%" title="Java" src="images/logo/Java.svg"></code>
@@ -62,9 +62,8 @@
 >- [x] *Проверка раздела 'Тарифные планы'*
 >- [x] *Проверка раздела 'Интернет пакеты'*
 >- [x] *Проверка раздела 'О нас'*
->- [x] *Проверка раздела 'Руководство'*
->- [x] *Проверка оформления подписки по почте*
->- [x] *Проверка заголовка главной страницы*
+>- [x] *Проверка раздела 'Вакансии'*
+
 
 ## :computer: Запуск тестов из терминала 
 
@@ -128,7 +127,7 @@ Report*</strong></code>, кликнув по которому, откроетс�
 >- [x] <code><strong>*EXECUTORS*</strong></code> - отображает исполнителя текущей сборки (ссылка на сборку в Jenkins)
 
 <p align="center">
-  <img src="images/screens/Alure_Report3.png" alt="Allure Report" width="900">
+  <img src="images/screens/Alure_Report.png" alt="Allure Report" width="900">
 </p>
 
 ## <img width="4%" title="Allure TestOPS" src="images/logo/Allure_TO.svg"> Интеграция с [Allure TestOps](https://allure.autotests.cloud/launch/10145)
