@@ -21,5 +21,30 @@ public class MainPageTests extends TestBase {
             $("#ms-main-banners-banner1").shouldBe(visible);
         });
     }
+ @Test
+    @DisplayName("Login modal form should appear on main page")
+    void generatedTest() {
+        step("Open url 'https://www.beeline.uz/ru/'", () ->
+                open("https://www.beeline.uz/ru"));
 
+        step("Click on Profile button", () ->
+                $(".logged-out").click());
+
+        step("Login modal should be visible", () ->
+                $("#pills-register-tab-header").shouldBe(visible));
+    }
+
+    @Test
+    @DisplayName("Page title should have header text")
+    void titleTest() {
+        step("Open url 'https://www.beeline.uz/ru/'", () ->
+                open("https://www.beeline.uz/ru/"));
+
+        step("Page title should have text 'Официальный сайт сотового оператора Beeline - Узбекистан.'", () -> {
+            String expectedTitle = "Официальный сайт сотового оператора Beeline - Узбекистан.";
+            String actualTitle = title();
+
+            assertThat(actualTitle).isEqualTo(expectedTitle);
+        });
+    }
 }
