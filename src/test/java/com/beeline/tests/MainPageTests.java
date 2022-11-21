@@ -11,36 +11,36 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class MainPageTests extends TestBase {
     @Test
-    @DisplayName("Checking the main page banner")
+    @DisplayName("Проверка баннера на главной странице")
     void checkBannerTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
             open("https://www.beeline.uz/ru/");
         });
 
-        step("check banner", () -> {
+        step("Проверка видимости баннера", () -> {
             $("#ms-main-banners-banner1").shouldBe(visible);
         });
     }
     @Test
-    @DisplayName("Login modal form should appear on main page")
+    @DisplayName("Проверка отображения окна авторизации")
     void generatedTest() {
-        step("Open url 'https://www.beeline.uz/ru/'", () ->
+        step("Открываем сайт 'https://www.beeline.uz/ru/'", () ->
                 open("https://www.beeline.uz/ru"));
 
-        step("Click on Profile button", () ->
+        step("Кликаем на кнопку 'Профиль'", () ->
                 $(".logged-out").click());
 
-        step("Login modal should be visible", () ->
+        step("Проверка видимости окна авторизации", () ->
                 $("#pills-register-tab-header").shouldBe(visible));
     }
 
     @Test
-    @DisplayName("Page title should have header text")
+    @DisplayName("Проверка наличия 'title' в 'header'")
     void titleTest() {
-        step("Open url 'https://www.beeline.uz/ru/'", () ->
+        step("Открываем сайт 'https://www.beeline.uz/ru/'", () ->
                 open("https://www.beeline.uz/ru/"));
 
-        step("Page title should have text 'Официальный сайт сотового оператора Beeline - Узбекистан.'", () -> {
+        step("Проверка наличия 'title': 'Официальный сайт сотового оператора Beeline - Узбекистан.'", () -> {
             String expectedTitle = "Официальный сайт сотового оператора Beeline - Узбекистан.";
             String actualTitle = title();
 
@@ -48,7 +48,7 @@ public class MainPageTests extends TestBase {
         });
     }
     @Test
-    @DisplayName("Checking the Tariff Plans section")
+    @DisplayName("Проверка работоспособности страницы 'Тарифные планы'")
     void tariffPlansTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
             open("https://www.beeline.uz/ru/");
@@ -64,7 +64,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Checking the Internet packages section")
+    @DisplayName("Проверка работоспособности страницы 'Интернет пакеты'")
     void internetPackagesTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
             open("https://www.beeline.uz/ru/");
@@ -80,7 +80,7 @@ public class MainPageTests extends TestBase {
     }
 
     @Test
-    @DisplayName("Checking page 'About'")
+    @DisplayName("Проверка работоспособности страницы 'О нас'")
     void aboutPageTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
             open("https://www.beeline.uz/ru/");
@@ -96,7 +96,7 @@ public class MainPageTests extends TestBase {
         });
     }
     @Test
-    @DisplayName("Checking page 'Vacancies'")
+    @DisplayName("Проверка работоспособности страницы 'Вакансии'")
     void vacanciesPageTest() {
         step("Открываем сайт https://www.beeline.uz/ru/", () -> {
             open("https://www.beeline.uz/ru/");
